@@ -9,7 +9,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://kit.fontawesome.com/8556688861.js" crossorigin="anonymous"></script>
+  <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'top',
+        trigger : 'hover'
+        content : '<img src="img/8B_search.gif" class="media-object" alt="Sample Image">'
+    });
+});
+</script>
   <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 
@@ -31,28 +42,69 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="#"><h1>BUZZ</h1></a>
   </div>
-      <form class="navbar-form mx-auto" action="/action_page.php">
+  <div class="input-group" style="width:900px;">
+   <input id="search" type="text" class="form-control"  placeholder="Search">
+   <span class="input-group-btn">
 
-          <input type="text" size="80" class="form-control" placeholder="Search">
+       <div class=" dropdown"  style="width:100%">
+      <a href="search.html" class=" dropdown-toggle">
+        <button class="btn btn-outline-light" type="button" onclick="searchin()">
+           <span style="font-size: 25px; color: white;">
+          <i class="fas fa-search"></i>
+        </span>
+        </button>
+     </a>
+     <div class="dropdown-menu" >
+       <img src="img/8B_search.gif" width=250/>
+     </div>
+</div>
 
-      </form>
-    <span style="font-size: 40px; color: white;">
-      <i class="far fa-user-circle"></i>
-    </span>
+
+   </span>
+</div>
+<div class="dropdown">
+<button class="btn btn-light dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <h5>Order History</h5>
+</button>
+<div class="dropdown-menu dropdown-menu1" aria-labelledby="dropdownMenuButton">
+  <!-- <img src="img/8B_search.gif" width=250/> -->
+</div>
+</div>
+<a href="profile.html">
+  <span style="font-size: 40px; color: white;">
+    <i class="far fa-user-circle"></i>
+  </span>
+</a>
     </div>
     <span style="font-size: 35px; color: white;">
-    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-shopping-cart" onclick="openNav()"></i>
         </span>
   </nav>
 
+  <!-- Sidebar -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Total Order</a>
+  <a href="#">Subtotal</a>
+
+  <center>
+  <button class="btn btn-light"  onclick="closeNav()" >Checkout</button>
+</center>
+</div>
+
+
+<!-- Use any element to open the sidenav -->
+
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 
   <!-- Full Page Image Header with Vertically Centered Content -->
 
-<header class="masthead">
+ <!-- <button type="button" class="btn btn-primary" >Popover</button> -->
 
       <div class="row h-100">
         <div class="col-12 text-center">
-          <img src="img/img3.jpg"  class="img-fluid" alt="Responsive image" id ="first"  style="width:200%; height:400px">
+          <img src="img/img3.jpg"  class="img-fluid" id ="first"  style="width:200%; height:400px">
 
           <div>
       <h1 class="font-weight-light  text-center">Shopping Made Easy</h1>
@@ -62,64 +114,134 @@
       </div>
 
 
-</header>
 
 
-<div class="container " style="margin-top: -170px">
+
+<div class="container " style="margin-top: -70px">
   <div class="row">
-    <div class="col-sm-4">
-      <h2>Recent Orders</h2>
-      <a href="itemPage.html">
-      <img class= "img rounded" onclick="getName(this)" src="img/img1.jpg"  id ="first"  style="width:100%">
-    </a>
+    <div class="shoes col-sm-4">
+      <h2>Shop Shoes</h2>
 
+      <!-- <div class="nav-item dropdown"  style="width:100%">
+     <a class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+      <a href="itemPage.html">
+      <img class= "imgfr rounded" onclick="getName(this);getTitle(id)" src="img/img1.jpg"  id ="shoes"  style="width:100%">
+    </a>
+    <!-- </a>
+    <div class="dropdown-menu" >
+      <img src="img/8B_search.gif" width=250/>
+    </div>
+
+</div> -->
     </div>
 
     <div class="col-sm-4">
       <h2>Deal of the Day</h2>
+      <div class="nav-item dropdown dropleft"  style="width:100%;left:0px">
+     <a class=" dropleft-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <a href="itemPage.html">
-      <img class= "img1 rounded" onclick="getName(this)" src="img/img1.jpg"  id ="first"   style="width:100%">
+      <img class= "imgfr rounded" onclick="getName(this)" id ="shoes"   style=" width:100%; height:230">
     </a>
+  </a>
+  <div class="dropdown-menu" >
+    <img src="img/4B_history.gif" width=250/>
+  </div>
+  </div>
     </div>
 
-    <div class="col-sm-4" style="margin-top:-20px">
-      <h4>Video:Recommended for You</h4>
-      <a href="itemPage.html">
-      <img class= "img rounded" onclick="getName(this)" src="img/img1.jpg"  id ="first"   style="width:100% ">
+    <div class="col-sm-4" style="margin-top:20px">
+      <h3>Video:Recommended for You</h3>
+      <div class="nav-item dropdown dropleft"  style="width:100%;left:0px">
+     <a class=" dropleft-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a href="video.html">
+      <img class= "rounded" onclick="getName(this)" src="img/img9.jpg"  id =""   style="width:100% ">
     </a>
+  </a>
+  <div class="dropdown-menu" >
+    <img src="img/5B_videosWatched_small.gif" width=250/>
+  </div>
+
+</div>
 
     </div>
 
     <div class="col-sm-4">
-      <h2>Shop Bestseller's</h2>
+      <h2 data-toggle="popover" title="Popover title" >Shop Bestseller's</h2>
+      <div class="nav-item dropdown dropright"  style="width:100%;left:0px">
+     <a class=" dropright-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <a href="itemPage.html">
-      <img class= "img rounded" onclick="getName(this)" src="img/img7.jpg"  id ="first"  style="width:100%">
+      <img class= "imgfr rounded" onclick="getName(this)" src="img/img7.jpg"   style="width:100%">
     </a>
+  </a>
+  <div class="dropdown-menu" >
+    <img src="img/6B_bestseller_small.gif" width=250/>
+  </div>
 
+</div>
     </div>
 
     <div class="col-sm-8">
       <h2>Recently Viewed</h2>
       <a href="itemPage.html">
-      <img class= "img rounded"  onclick="getName(this)" src="img/img5.jpg"  id ="first"  style="width:100%">
+      <img class= "imgfr rounded"  onclick="getName(this)" src="img/img5.jpg"   style="width:100%">
     </a>
 
       <br>
   </div>
 
-  <div class="col-sm-4">
-    <h2>Shop Yoga Mats</h2>
-    <a href="itemPage.html">
-    <img class= "img rounded" onclick="getName(this)" src="img/img4.jpg"id ="first" style="width:100%">
-  </a>
-
+  <div class="col-sm-4 ">
+    <h2>Shop Controllers</h2>
+    <div class="nav-item dropdown dropright"  style="width:100%;left:0px">
+   <a class=" dropright-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a href="itemPage.html" data-toggle="modal" data-target="#exampleModal">
+        <span class=" tooltiptext"></span>
+    <img class= " rounded" onclick="getName(this)" src="img/img4.jpg" style="width:100%">
+    <div class="wrapper">
+  <span style="font-size: 50px;color:navy;top: 30px;"> <i class="fas fa-ad"></i></span>
   </div>
+  </a>
+</a>
+<div class="dropdown-menu" >
+  <img src="img/3B_trackingMouseLocation_small.gif" width=250/>
+</div>
+
+</div>
+</style>
+
+
+</div>
+
+<!-- POPUP -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AD</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This will take you to away from Buzz. Would you like to leave Buzz?
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.playstation.com/en-us/explore/accessories/gaming-controllers/">
+        <button type="button" class="btn btn-secondary">GO TO AD</button>
+      </a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <div class="col-sm-8">
       <h2>Recommended for You</h2>
       <a href="itemPage.html">
-      <img class= "img rounded" onclick="getName(this)" src="img/img6.jpg"  id ="first" style="width:100%">
+
+      <img class= "imgfr rounded" onclick="getName(this)" src="img/img6.jpg"  id ="first" style="width:100%">
+
     </a>
+
 
     </div>
   </div>
@@ -135,46 +257,6 @@
     <!-- Grid row-->
     <div class="row text-center d-flex justify-content-center pt-5 mb-3">
 
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">About us</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Products</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Awards</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Help</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Contact</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
-
     </div>
     <!-- Grid row-->
     <hr class="rgba-white-light" style="margin: 0 15%;">
@@ -184,11 +266,7 @@
 
       <!-- Grid column -->
       <div class="col-md-8 col-12 mt-5">
-        <p style="line-height: 1.7rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-          explicabo.
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+        <p style="line-height: 1.7rem"></p>
       </div>
       <!-- Grid column -->
 
@@ -230,17 +308,19 @@
     <!-- Grid row-->
 
   </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
 </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+
 	<script src="./function.js"></script>
 </body>
 </html>

@@ -1,0 +1,171 @@
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Orchid Item</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/8556688861.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+  <!-- Collapsible content -->
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html"><h1>BUZZ</h1></a>
+    </div>
+
+    <div class="input-group" style="width:900px;">
+     <input type="text" class="form-control"  placeholder="Search">
+     <span class="input-group-btn">
+          <button class="btn btn-outline-light" type="button">  <span style="font-size: 25px; color: white;"><i class="fas fa-search"></i>  </span></button>
+     </span>
+  </div>
+
+  <div class="dropdown">
+  <button class="btn btn-light dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <h5>Order History</h5>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+  </div>
+</div>
+    <a href="profile.html">
+      <span style="font-size: 40px; color: white;">
+        <i class="far fa-user-circle"></i>
+      </span>
+    </a>
+      </div>
+      <span style="font-size: 35px; color: white;">
+      <i class="fas fa-shopping-cart" onclick="openNav()"></i>
+          </span>
+    </nav>
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Total Order</a>
+    <a href="#">Subtotal</a>
+    <center>
+    <button class="btn btn-light"  onclick="closeNav()">Checkout</button>
+  </center>
+  </div>
+
+<div class="container" style="margin-top:30px;background-color:lightgrey;"">
+<div class="row">
+  <div class="col-sm-8 align-items-center">
+      <img class= "img rounded" src=""  id ="img"  style="width:100%">
+
+    </div>
+
+<div class="col-sm-2">
+  <center>
+<h1 style="margin-top:50px;""> Secret Life of Pets:2</h1>
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+</center>
+<a href="https://www.youtube.com/watch?v=EUZpVWepAQw">
+<button class="btn btn-warning" type="button" onclick="myFunction()" style="margin-top:80px;margin-left:100px;"> WATCH NOW</button>
+</a>
+  </div>
+</div>
+</div>
+
+<center>
+<div style="margin-top:40px;">
+  <span style="font-size: 25px;" >
+  <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>  Top Review: "Best Movie of the Year"
+  </p>
+  </span>
+  </div>
+</center>
+
+<div class="jumbotron bg-dark text-center" style="margin-top:200px;color:black">
+  <!-- Footer -->
+<footer class="page-footer font-small">
+
+  <!-- Footer Links -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+    </div>
+    <!-- Grid row-->
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+
+    <!-- Grid row-->
+    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+      <!-- Grid column -->
+      <div class="col-md-8 col-12 mt-5">
+        <p style="line-height: 1.7rem"></p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="clearfix d-md-none rgba-grey-light" style="margin: 10% 15% 5%;">
+
+    <!-- Grid row-->
+    <div class="row pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-12">
+
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text"> </i>
+          </a>
+
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+
+</footer>
+<!-- Footer -->
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+	<script src="./itemfunction.js"></script>
+  <script src="./function.js"></script>
+</body>
+</html>
