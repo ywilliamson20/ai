@@ -1,14 +1,5 @@
 
-var firebaseConfig = {
-  apiKey: "AIzaSyDJChMAvMh1TG03UsyI_Eo6KgZv9PCYsRM",
-  authDomain: "ailearn-c1f1e.firebaseapp.com",
-  databaseURL: "https://ailearn-c1f1e.firebaseio.com",
-  projectId: "ailearn-c1f1e",
-  storageBucket: "ailearn-c1f1e.appspot.com",
-  messagingSenderId: "986144667022",
-  appId: "1:986144667022:web:75f6e9a00c7faebe8660df",
-  measurementId: "G-W6V8C1M3BH"
-};
+
 
 if (firebase.apps.length === 0) {
       firebase.initializeApp(firebaseConfig);
