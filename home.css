@@ -160,3 +160,26 @@
     height: 170px;
     background-size: cover;
 }
+
+//Handles the border and arrow thing
+.dropdown-menu {
+   margin: 0;
+   list-style: none;
+   white-space: nowrap;
+   border: 9px solid #02ad2d;
+   padding: 10px;
+   background-color: #ffffff;
+
+ }
+
+//Handles the border and arrow thing
+ .dropdown-menu::before{
+   position: absolute;
+   top: 0px;
+   right:-31px;
+   display: inline-block;
+   border-top: 30px solid transparent;
+   border-left: 30px solid #02ad2d;
+   border-bottom: 30px solid transparent;
+   content: '';
+}
