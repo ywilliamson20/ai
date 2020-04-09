@@ -161,7 +161,7 @@
     background-size: cover;
 }
 
-//Handles the border and arrow thing
+/*Handles the border and arrow thing*/
 .dropdown-menu {
    margin: 0;
    list-style: none;
@@ -172,7 +172,7 @@
 
  }
 
-//Handles the border and arrow thing
+/*Handles the border and arrow thing*/
  .dropdown-menu::before{
    position: absolute;
    top: 0px;
